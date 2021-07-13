@@ -1,0 +1,27 @@
+{
+   "type": "mssql",
+   "host": "192.168.88.172",
+   "port": 1433,
+   "app_port": 8800,
+   "username": "sa",
+   "password": "spts@3311",
+   "database": "MGApparelWarehouse",
+   "synchronize": false,
+   "logging": true,
+   "logger": "file",
+   "encrypt": false,
+   "entities": [
+      "./build/src/entity/**/*.js"
+   ],
+   "migrations": [
+      "./build/src/migration/**/*.js"
+   ],
+   "subscribers": [
+      "./build/src/subscriber/**/*.js"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}

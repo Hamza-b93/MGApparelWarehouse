@@ -1,0 +1,851 @@
+RollId,IsManual,AllocatedTo,IsRejected
+1,true,,true
+2,true,SAMPLING,false
+3,false,,true
+4,false,,true
+5,true,,true
+6,false,,true
+7,false,,true
+8,false,CUTTING,false
+9,false,,true
+10,true,,true
+11,false,,true
+12,false,OUTSIDE PROCESSING,false
+13,false,CUTTING,false
+14,true,,true
+15,false,,true
+16,true,SEWING,false
+17,false,SAMPLING,false
+18,true,OUTSIDE PROCESSING,false
+19,true,,true
+20,true,,true
+21,true,,true
+22,false,SEWING,false
+23,false,CUTTING,false
+24,false,SAMPLING,false
+25,true,SAMPLING,false
+26,false,SEWING,false
+27,true,TRAINING,false
+28,true,,true
+29,false,TRAINING,false
+30,true,TRAINING,false
+31,true,,true
+32,true,OUTSIDE PROCESSING,false
+33,true,,true
+34,true,TRAINING,false
+35,true,SEWING,false
+36,true,,true
+37,false,CUTTING,false
+38,false,SEWING,false
+39,true,,true
+40,false,CUTTING,false
+41,false,,true
+42,false,,true
+43,false,SAMPLING,false
+44,true,TRAINING,false
+45,false,TRAINING,false
+46,false,SEWING,false
+47,false,SAMPLING,false
+48,true,SAMPLING,false
+49,true,,true
+50,true,,true
+51,true,,true
+52,false,SAMPLING,false
+53,true,,true
+54,false,,true
+55,true,TRAINING,false
+56,true,CUTTING,false
+57,true,,true
+58,true,,true
+59,true,,true
+60,true,,true
+61,false,SAMPLING,false
+62,false,,true
+63,true,,true
+64,false,CUTTING,false
+65,true,OUTSIDE PROCESSING,false
+66,true,,true
+67,false,,true
+68,true,,true
+69,true,,true
+70,false,,true
+71,true,,true
+72,true,TRAINING,false
+73,false,TRAINING,false
+74,true,,true
+75,false,SAMPLING,false
+76,false,SEWING,false
+77,false,,true
+78,false,SAMPLING,false
+79,false,SEWING,false
+80,true,,true
+81,true,,true
+82,false,,true
+83,false,TRAINING,false
+84,true,,true
+85,true,,true
+86,false,,true
+87,false,,true
+88,true,,true
+89,true,SEWING,false
+90,true,,true
+91,true,SEWING,false
+92,false,CUTTING,false
+93,false,,true
+94,false,,true
+95,true,,true
+96,false,,true
+97,false,OUTSIDE PROCESSING,false
+98,true,,true
+99,true,,true
+100,false,,true
+101,false,,true
+102,false,SAMPLING,false
+103,false,,true
+104,false,,true
+105,true,,true
+106,true,,true
+107,true,,true
+108,false,OUTSIDE PROCESSING,false
+109,false,,true
+110,true,SAMPLING,false
+111,false,,true
+112,true,,true
+113,false,,true
+114,true,SAMPLING,false
+115,true,,true
+116,false,SEWING,false
+117,false,TRAINING,false
+118,false,OUTSIDE PROCESSING,false
+119,false,,true
+120,true,TRAINING,false
+121,false,SEWING,false
+122,true,,true
+123,false,,true
+124,true,,true
+125,true,SEWING,false
+126,true,,true
+127,false,,true
+128,true,,true
+129,false,SAMPLING,false
+130,true,,true
+131,false,,true
+132,true,SAMPLING,false
+133,true,SAMPLING,false
+134,true,,true
+135,false,CUTTING,false
+136,true,SEWING,false
+137,true,,true
+138,false,,true
+139,false,TRAINING,false
+140,false,CUTTING,false
+141,true,OUTSIDE PROCESSING,false
+142,true,,true
+143,true,,true
+144,true,CUTTING,false
+145,true,TRAINING,false
+146,true,TRAINING,false
+147,true,,true
+148,false,SEWING,false
+149,true,,true
+150,false,OUTSIDE PROCESSING,false
+151,true,SAMPLING,false
+152,false,,true
+153,false,,true
+154,false,,true
+155,true,,true
+156,true,,true
+157,true,SEWING,false
+158,false,,true
+159,false,,true
+160,false,,true
+161,true,,true
+162,false,CUTTING,false
+163,false,OUTSIDE PROCESSING,false
+164,false,,true
+165,false,OUTSIDE PROCESSING,false
+166,true,TRAINING,false
+167,true,OUTSIDE PROCESSING,false
+168,false,,true
+169,true,,true
+170,true,,true
+171,false,,true
+172,true,,true
+173,true,SEWING,false
+174,false,,true
+175,false,,true
+176,false,,true
+177,true,SAMPLING,false
+178,false,,true
+179,false,SEWING,false
+180,false,SAMPLING,false
+181,false,CUTTING,false
+182,true,SAMPLING,false
+183,false,,true
+184,true,,true
+185,true,SAMPLING,false
+186,true,CUTTING,false
+187,false,OUTSIDE PROCESSING,false
+188,false,SAMPLING,false
+189,true,,true
+190,true,,true
+191,false,,true
+192,true,,true
+193,true,SEWING,false
+194,false,TRAINING,false
+195,false,,true
+196,false,SEWING,false
+197,true,,true
+198,true,,true
+199,false,,true
+200,true,,true
+201,false,OUTSIDE PROCESSING,false
+202,true,,true
+203,false,CUTTING,false
+204,false,SEWING,false
+205,false,,true
+206,false,,true
+207,false,,true
+208,false,,true
+209,false,,true
+210,true,,true
+211,true,,true
+212,false,OUTSIDE PROCESSING,false
+213,true,SAMPLING,false
+214,true,,true
+215,false,TRAINING,false
+216,true,SAMPLING,false
+217,false,,true
+218,false,,true
+219,false,,true
+220,true,,true
+221,false,,true
+222,true,SEWING,false
+223,true,CUTTING,false
+224,true,,true
+225,false,,true
+226,true,,true
+227,false,,true
+228,true,OUTSIDE PROCESSING,false
+229,false,SEWING,false
+230,false,SEWING,false
+231,true,,true
+232,true,,true
+233,false,,true
+234,true,SEWING,false
+235,true,SAMPLING,false
+236,true,,true
+237,true,SEWING,false
+238,false,,true
+239,true,,true
+240,true,,true
+241,true,,true
+242,true,,true
+243,false,SAMPLING,false
+244,false,,true
+245,false,,true
+246,false,CUTTING,false
+247,false,,true
+248,true,,true
+249,false,,true
+250,true,SAMPLING,false
+251,false,CUTTING,false
+252,false,,true
+253,true,CUTTING,false
+254,true,,true
+255,true,,true
+256,true,SEWING,false
+257,true,OUTSIDE PROCESSING,false
+258,false,OUTSIDE PROCESSING,false
+259,true,SEWING,false
+260,true,CUTTING,false
+261,false,,true
+262,true,OUTSIDE PROCESSING,false
+263,true,,true
+264,true,OUTSIDE PROCESSING,false
+265,true,,true
+266,false,,true
+267,false,CUTTING,false
+268,true,OUTSIDE PROCESSING,false
+269,true,,true
+270,false,,true
+271,false,SAMPLING,false
+272,true,SAMPLING,false
+273,true,,true
+274,false,CUTTING,false
+275,false,OUTSIDE PROCESSING,false
+276,true,SAMPLING,false
+277,true,,true
+278,true,CUTTING,false
+279,true,SEWING,false
+280,false,SEWING,false
+281,false,,true
+282,true,,true
+283,true,,true
+284,false,CUTTING,false
+285,false,CUTTING,false
+286,true,SAMPLING,false
+287,false,SAMPLING,false
+288,false,,true
+289,true,CUTTING,false
+290,false,,true
+291,true,,true
+292,true,SEWING,false
+293,false,OUTSIDE PROCESSING,false
+294,false,TRAINING,false
+295,false,,true
+296,true,,true
+297,true,,true
+298,false,,true
+299,true,OUTSIDE PROCESSING,false
+300,true,,true
+301,true,OUTSIDE PROCESSING,false
+302,false,,true
+303,true,,true
+304,true,,true
+305,false,OUTSIDE PROCESSING,false
+306,true,SAMPLING,false
+307,true,SEWING,false
+308,true,,true
+309,true,CUTTING,false
+310,true,,true
+311,false,,true
+312,false,,true
+313,false,CUTTING,false
+314,true,,true
+315,false,SEWING,false
+316,true,SAMPLING,false
+317,true,TRAINING,false
+318,true,SAMPLING,false
+319,true,,true
+320,true,SEWING,false
+321,true,,true
+322,false,SAMPLING,false
+323,false,CUTTING,false
+324,true,SAMPLING,false
+325,false,TRAINING,false
+326,false,CUTTING,false
+327,true,,true
+328,false,SAMPLING,false
+329,true,,true
+330,false,OUTSIDE PROCESSING,false
+331,false,TRAINING,false
+332,false,,true
+333,false,,true
+334,false,,true
+335,true,,true
+336,true,CUTTING,false
+337,true,CUTTING,false
+338,true,,true
+339,false,OUTSIDE PROCESSING,false
+340,true,CUTTING,false
+341,false,SAMPLING,false
+342,true,SEWING,false
+343,true,,true
+344,false,,true
+345,true,,true
+346,false,TRAINING,false
+347,false,,true
+348,false,SAMPLING,false
+349,false,SAMPLING,false
+350,false,,true
+351,false,,true
+352,true,CUTTING,false
+353,false,,true
+354,true,,true
+355,false,OUTSIDE PROCESSING,false
+356,false,SAMPLING,false
+357,false,,true
+358,false,SAMPLING,false
+359,false,OUTSIDE PROCESSING,false
+360,false,SEWING,false
+361,true,,true
+362,true,,true
+363,false,,true
+364,true,SAMPLING,false
+365,false,,true
+366,true,TRAINING,false
+367,false,CUTTING,false
+368,false,CUTTING,false
+369,false,,true
+370,true,CUTTING,false
+371,false,OUTSIDE PROCESSING,false
+372,false,,true
+373,true,CUTTING,false
+374,false,,true
+375,true,CUTTING,false
+376,false,,true
+377,false,,true
+378,false,,true
+379,false,SAMPLING,false
+380,true,SAMPLING,false
+381,false,,true
+382,true,,true
+383,false,,true
+384,false,CUTTING,false
+385,true,SAMPLING,false
+386,false,,true
+387,false,TRAINING,false
+388,false,CUTTING,false
+389,true,CUTTING,false
+390,false,,true
+391,true,CUTTING,false
+392,false,OUTSIDE PROCESSING,false
+393,true,SAMPLING,false
+394,true,TRAINING,false
+395,false,,true
+396,true,,true
+397,true,OUTSIDE PROCESSING,false
+398,true,TRAINING,false
+399,false,,true
+400,true,OUTSIDE PROCESSING,false
+401,false,TRAINING,false
+402,true,TRAINING,false
+403,true,,true
+404,true,SEWING,false
+405,false,SAMPLING,false
+406,true,TRAINING,false
+407,false,OUTSIDE PROCESSING,false
+408,false,TRAINING,false
+409,false,SAMPLING,false
+410,true,SEWING,false
+411,true,SEWING,false
+412,true,,true
+413,false,SEWING,false
+414,false,,true
+415,true,,true
+416,true,SEWING,false
+417,true,SAMPLING,false
+418,true,SEWING,false
+419,false,,true
+420,false,,true
+421,true,,true
+422,true,,true
+423,false,,true
+424,true,,true
+425,true,CUTTING,false
+426,true,TRAINING,false
+427,true,CUTTING,false
+428,true,CUTTING,false
+429,true,SAMPLING,false
+430,true,TRAINING,false
+431,false,CUTTING,false
+432,true,CUTTING,false
+433,true,,true
+434,false,SAMPLING,false
+435,false,SEWING,false
+436,true,CUTTING,false
+437,true,,true
+438,true,TRAINING,false
+439,false,CUTTING,false
+440,true,,true
+441,false,SAMPLING,false
+442,false,,true
+443,true,,true
+444,false,CUTTING,false
+445,false,,true
+446,false,,true
+447,true,,true
+448,false,,true
+449,true,,true
+450,false,,true
+451,true,,true
+452,false,CUTTING,false
+453,false,,true
+454,true,,true
+455,false,,true
+456,true,OUTSIDE PROCESSING,false
+457,false,,true
+458,true,,true
+459,false,,true
+460,true,,true
+461,false,SEWING,false
+462,false,OUTSIDE PROCESSING,false
+463,true,,true
+464,false,,true
+465,false,TRAINING,false
+466,false,,true
+467,true,SAMPLING,false
+468,false,SEWING,false
+469,true,,true
+470,false,SEWING,false
+471,true,TRAINING,false
+472,false,,true
+473,true,,true
+474,true,,true
+475,false,OUTSIDE PROCESSING,false
+476,false,CUTTING,false
+477,false,CUTTING,false
+478,true,,true
+479,false,,true
+480,true,,true
+481,false,SAMPLING,false
+482,false,,true
+483,true,,true
+484,true,,true
+485,true,SEWING,false
+486,true,SAMPLING,false
+487,true,,true
+488,false,,true
+489,true,SEWING,false
+490,false,SEWING,false
+491,true,,true
+492,true,,true
+493,true,CUTTING,false
+494,false,,true
+495,false,SAMPLING,false
+496,false,,true
+497,true,,true
+498,false,,true
+499,true,CUTTING,false
+500,true,,true
+501,true,,true
+502,false,OUTSIDE PROCESSING,false
+503,true,CUTTING,false
+504,false,,true
+505,true,,true
+506,true,,true
+507,true,SEWING,false
+508,false,TRAINING,false
+509,true,,true
+510,false,,true
+511,true,CUTTING,false
+512,false,,true
+513,false,,true
+514,true,TRAINING,false
+515,true,,true
+516,true,,true
+517,false,,true
+518,true,SAMPLING,false
+519,false,TRAINING,false
+520,true,OUTSIDE PROCESSING,false
+521,false,TRAINING,false
+522,false,,true
+523,false,,true
+524,true,,true
+525,true,,true
+526,false,,true
+527,false,TRAINING,false
+528,false,TRAINING,false
+529,false,,true
+530,false,SEWING,false
+531,true,,true
+532,true,SEWING,false
+533,false,,true
+534,true,,true
+535,true,SAMPLING,false
+536,true,,true
+537,false,SEWING,false
+538,false,,true
+539,true,,true
+540,true,,true
+541,false,,true
+542,false,,true
+543,true,SAMPLING,false
+544,true,,true
+545,false,OUTSIDE PROCESSING,false
+546,false,TRAINING,false
+547,true,,true
+548,true,OUTSIDE PROCESSING,false
+549,true,,true
+550,false,,true
+551,false,OUTSIDE PROCESSING,false
+552,false,,true
+553,true,CUTTING,false
+554,false,,true
+555,true,OUTSIDE PROCESSING,false
+556,false,SEWING,false
+557,false,,true
+558,false,OUTSIDE PROCESSING,false
+559,false,TRAINING,false
+560,true,CUTTING,false
+561,true,,true
+562,true,OUTSIDE PROCESSING,false
+563,false,,true
+564,false,SAMPLING,false
+565,true,,true
+566,true,,true
+567,true,OUTSIDE PROCESSING,false
+568,false,SEWING,false
+569,false,,true
+570,true,OUTSIDE PROCESSING,false
+571,false,CUTTING,false
+572,false,SAMPLING,false
+573,true,,true
+574,true,OUTSIDE PROCESSING,false
+575,false,,true
+576,true,OUTSIDE PROCESSING,false
+577,false,,true
+578,false,,true
+579,true,,true
+580,false,OUTSIDE PROCESSING,false
+581,false,OUTSIDE PROCESSING,false
+582,true,,true
+583,false,,true
+584,false,OUTSIDE PROCESSING,false
+585,false,,true
+586,true,SEWING,false
+587,false,,true
+588,false,,true
+589,true,OUTSIDE PROCESSING,false
+590,false,,true
+591,true,,true
+592,false,TRAINING,false
+593,false,CUTTING,false
+594,true,,true
+595,false,SEWING,false
+596,true,,true
+597,true,SAMPLING,false
+598,false,TRAINING,false
+599,false,OUTSIDE PROCESSING,false
+600,true,,true
+601,true,CUTTING,false
+602,true,SAMPLING,false
+603,true,,true
+604,true,,true
+605,false,,true
+606,true,CUTTING,false
+607,true,,true
+608,true,OUTSIDE PROCESSING,false
+609,true,OUTSIDE PROCESSING,false
+610,true,CUTTING,false
+611,false,SAMPLING,false
+612,true,,true
+613,false,CUTTING,false
+614,false,,true
+615,false,,true
+616,true,,true
+617,false,SEWING,false
+618,false,OUTSIDE PROCESSING,false
+619,false,SAMPLING,false
+620,true,SAMPLING,false
+621,false,,true
+622,true,CUTTING,false
+623,false,CUTTING,false
+624,false,OUTSIDE PROCESSING,false
+625,false,,true
+626,false,,true
+627,true,SAMPLING,false
+628,true,OUTSIDE PROCESSING,false
+629,false,,true
+630,true,TRAINING,false
+631,false,,true
+632,false,SEWING,false
+633,false,SEWING,false
+634,false,SAMPLING,false
+635,false,TRAINING,false
+636,false,,true
+637,true,OUTSIDE PROCESSING,false
+638,true,CUTTING,false
+639,false,CUTTING,false
+640,false,,true
+641,false,,true
+642,true,,true
+643,true,,true
+644,true,,true
+645,true,SAMPLING,false
+646,false,,true
+647,false,,true
+648,true,,true
+649,false,,true
+650,false,SEWING,false
+651,false,CUTTING,false
+652,false,SEWING,false
+653,true,,true
+654,false,SEWING,false
+655,true,,true
+656,true,SAMPLING,false
+657,false,,true
+658,false,,true
+659,true,,true
+660,true,SAMPLING,false
+661,false,TRAINING,false
+662,true,SAMPLING,false
+663,false,OUTSIDE PROCESSING,false
+664,true,TRAINING,false
+665,false,,true
+666,false,SEWING,false
+667,false,CUTTING,false
+668,false,,true
+669,false,,true
+670,true,SAMPLING,false
+671,false,SEWING,false
+672,true,OUTSIDE PROCESSING,false
+673,true,,true
+674,true,SAMPLING,false
+675,true,SAMPLING,false
+676,false,,true
+677,false,CUTTING,false
+678,false,,true
+679,true,CUTTING,false
+680,false,,true
+681,false,TRAINING,false
+682,false,OUTSIDE PROCESSING,false
+683,true,,true
+684,true,,true
+685,false,SEWING,false
+686,true,,true
+687,true,OUTSIDE PROCESSING,false
+688,false,,true
+689,true,OUTSIDE PROCESSING,false
+690,false,OUTSIDE PROCESSING,false
+691,false,TRAINING,false
+692,false,,true
+693,true,,true
+694,false,SAMPLING,false
+695,false,,true
+696,false,,true
+697,true,,true
+698,false,,true
+699,false,,true
+700,true,,true
+701,true,,true
+702,true,SAMPLING,false
+703,true,SEWING,false
+704,false,,true
+705,false,,true
+706,false,,true
+707,false,,true
+708,true,,true
+709,true,SAMPLING,false
+710,false,OUTSIDE PROCESSING,false
+711,false,SAMPLING,false
+712,true,,true
+713,false,,true
+714,true,SAMPLING,false
+715,true,CUTTING,false
+716,false,,true
+717,false,OUTSIDE PROCESSING,false
+718,false,,true
+719,false,CUTTING,false
+720,false,SAMPLING,false
+721,false,TRAINING,false
+722,true,OUTSIDE PROCESSING,false
+723,false,SAMPLING,false
+724,true,,true
+725,false,,true
+726,false,OUTSIDE PROCESSING,false
+727,false,,true
+728,true,,true
+729,false,,true
+730,false,,true
+731,false,,true
+732,true,,true
+733,true,,true
+734,false,,true
+735,false,,true
+736,true,TRAINING,false
+737,false,,true
+738,true,CUTTING,false
+739,false,,true
+740,false,,true
+741,true,SAMPLING,false
+742,false,,true
+743,false,SAMPLING,false
+744,false,SAMPLING,false
+745,true,OUTSIDE PROCESSING,false
+746,true,,true
+747,false,TRAINING,false
+748,false,CUTTING,false
+749,false,SAMPLING,false
+750,false,OUTSIDE PROCESSING,false
+751,true,CUTTING,false
+752,false,TRAINING,false
+753,false,SEWING,false
+754,false,SEWING,false
+755,true,TRAINING,false
+756,true,SEWING,false
+757,true,,true
+758,false,,true
+759,true,TRAINING,false
+760,false,,true
+761,false,SAMPLING,false
+762,true,,true
+763,false,OUTSIDE PROCESSING,false
+764,false,,true
+765,true,OUTSIDE PROCESSING,false
+766,true,TRAINING,false
+767,true,,true
+768,true,,true
+769,true,SAMPLING,false
+770,false,CUTTING,false
+771,false,TRAINING,false
+772,true,SAMPLING,false
+773,false,TRAINING,false
+774,true,TRAINING,false
+775,true,SAMPLING,false
+776,false,SAMPLING,false
+777,false,CUTTING,false
+778,false,SEWING,false
+779,true,OUTSIDE PROCESSING,false
+780,false,,true
+781,false,CUTTING,false
+782,false,,true
+783,true,OUTSIDE PROCESSING,false
+784,true,,true
+785,true,SAMPLING,false
+786,true,TRAINING,false
+787,true,,true
+788,true,,true
+789,false,,true
+790,true,CUTTING,false
+791,false,,true
+792,false,,true
+793,false,TRAINING,false
+794,true,CUTTING,false
+795,true,,true
+796,false,SAMPLING,false
+797,false,SAMPLING,false
+798,true,,true
+799,false,,true
+800,false,CUTTING,false
+801,true,,true
+802,false,,true
+803,true,,true
+804,true,SAMPLING,false
+805,false,CUTTING,false
+806,true,TRAINING,false
+807,false,SEWING,false
+808,false,SEWING,false
+809,false,,true
+810,false,,true
+811,false,CUTTING,false
+812,true,,true
+813,true,OUTSIDE PROCESSING,false
+814,false,,true
+815,false,OUTSIDE PROCESSING,false
+816,false,,true
+817,true,TRAINING,false
+818,false,,true
+819,false,,true
+820,true,,true
+821,true,,true
+822,true,OUTSIDE PROCESSING,false
+823,true,,true
+824,false,OUTSIDE PROCESSING,false
+825,false,TRAINING,false
+826,true,SEWING,false
+827,false,SAMPLING,false
+828,true,,true
+829,true,,true
+830,false,OUTSIDE PROCESSING,false
+831,true,SEWING,false
+832,false,SAMPLING,false
+833,true,TRAINING,false
+834,true,,true
+835,false,,true
+836,false,TRAINING,false
+837,true,,true
+838,false,SAMPLING,false
+839,true,,true
+840,false,OUTSIDE PROCESSING,false
+841,true,OUTSIDE PROCESSING,false
+842,false,TRAINING,false
+843,false,,true
+844,false,,true
+845,false,CUTTING,false
+846,false,OUTSIDE PROCESSING,false
+847,true,,true
+848,false,,true
+849,true,CUTTING,false
+850,true,SAMPLING,false
