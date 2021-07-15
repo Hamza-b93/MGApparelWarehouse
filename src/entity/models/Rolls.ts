@@ -8,25 +8,9 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { Allocations } from "./Allocations";
-import { PackingList } from "./PackingList";
 import { Tag } from "./Tag";
 
-@Index("ClusteredIndex-20210507-104751", ["rollId"], { unique: true })
-@Index(
-  "NonClusteredIndex-20210507-104804",
-  ["isCardAssigned", "cardAssignmentTimestamp", "rollStateId", "rollId"],
-  { unique: true }
-)
-@Index("NonClusteredIndex-20210507-110417", ["netWeight", "rollId"], {
-  unique: true,
-})
-@Index(
-  "NonClusteredIndex-20210507-112116",
-  ["activityId", "activityRollAssignmentTimestamp", "rollId"],
-  { unique: true }
-)
-@Index("Rolls_pk", ["rollId"], { unique: true })
-@Index("Rolls_RollId_uindex", ["rollId"], { unique: true })
+
 @Entity("Rolls", { schema: "Essentials" })
 export class Rolls {
   @PrimaryGeneratedColumn({ type: "int", name: "RollId" })
@@ -115,25 +99,9 @@ export class Rolls {
   })
   antenna: number | null;
 
-  @OneToMany(() => Allocations, (allocations) => allocations.roll)
-  allocations: Allocations[];
-
-  // @ManyToOne(() => PackingList, (packingList) => packingList.rolls)
-  // @JoinColumn([
-  //   { name: "PackingListId", referencedColumnName: "packingListId" },
-  // ])
   @Column("int", {
     name: "PackingListId",
     nullable: false,
   })
-  packingList: number;
-
-  @ManyToOne(() => Allocations, (allocations) => allocations.rolls)
-  @JoinColumn([
-    { name: "LastAllocationId", referencedColumnName: "allocationId" },
-  ])
-  lastAllocation: Allocations;
-
-  @OneToMany(() => Tag, (tag) => tag.roll)
-  tags: Tag[];
+  packingListId: number;
 }

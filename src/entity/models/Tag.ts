@@ -22,8 +22,4 @@ export class Tag {
 
   @Column({ type: "int", name: "RollID" })
   rollId: number;
-
-  @ManyToOne(() => Rolls, (rolls) => rolls.tags)
-  @JoinColumn([{ name: "RollID", referencedColumnName: "rollId" }])
-  roll: Rolls;
 }

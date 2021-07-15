@@ -11,8 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Rolls = void 0;
 const typeorm_1 = require("typeorm");
-const Allocations_1 = require("./Allocations");
-const Tag_1 = require("./Tag");
 let Rolls = class Rolls {
 };
 __decorate([
@@ -122,36 +120,13 @@ __decorate([
     __metadata("design:type", Number)
 ], Rolls.prototype, "antenna", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => Allocations_1.Allocations, (allocations) => allocations.roll),
-    __metadata("design:type", Array)
-], Rolls.prototype, "allocations", void 0);
-__decorate([
     typeorm_1.Column("int", {
         name: "PackingListId",
         nullable: false,
     }),
     __metadata("design:type", Number)
-], Rolls.prototype, "packingList", void 0);
-__decorate([
-    typeorm_1.ManyToOne(() => Allocations_1.Allocations, (allocations) => allocations.rolls),
-    typeorm_1.JoinColumn([
-        { name: "LastAllocationId", referencedColumnName: "allocationId" },
-    ]),
-    __metadata("design:type", Allocations_1.Allocations)
-], Rolls.prototype, "lastAllocation", void 0);
-__decorate([
-    typeorm_1.OneToMany(() => Tag_1.Tag, (tag) => tag.roll),
-    __metadata("design:type", Array)
-], Rolls.prototype, "tags", void 0);
+], Rolls.prototype, "packingListId", void 0);
 Rolls = __decorate([
-    typeorm_1.Index("ClusteredIndex-20210507-104751", ["rollId"], { unique: true }),
-    typeorm_1.Index("NonClusteredIndex-20210507-104804", ["isCardAssigned", "cardAssignmentTimestamp", "rollStateId", "rollId"], { unique: true }),
-    typeorm_1.Index("NonClusteredIndex-20210507-110417", ["netWeight", "rollId"], {
-        unique: true,
-    }),
-    typeorm_1.Index("NonClusteredIndex-20210507-112116", ["activityId", "activityRollAssignmentTimestamp", "rollId"], { unique: true }),
-    typeorm_1.Index("Rolls_pk", ["rollId"], { unique: true }),
-    typeorm_1.Index("Rolls_RollId_uindex", ["rollId"], { unique: true }),
     typeorm_1.Entity("Rolls", { schema: "Essentials" })
 ], Rolls);
 exports.Rolls = Rolls;

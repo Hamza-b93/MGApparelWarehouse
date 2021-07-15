@@ -4352,3 +4352,966 @@ SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type
 INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
 
 SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000,\"SplitWeight\":231}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:29:42.503Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"SplitWeight\":231}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:30:15.275Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:37:46.494Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000,\"SplitWeight\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:37:56.794Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000,\"SplitWeight\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:38:03.635Z][SLOW QUERY: 6829 ms]: SELECT "SuitableRollsToSplit"."RollId" AS "SuitableRollsToSplit_RollId", "SuitableRollsToSplit"."ParentRollId" AS "SuitableRollsToSplit_ParentRollId", "SuitableRollsToSplit"."NetWeight" AS "SuitableRollsToSplit_NetWeight", "SuitableRollsToSplit"."NetLength" AS "SuitableRollsToSplit_NetLength", "SuitableRollsToSplit"."PackingListId" AS "SuitableRollsToSplit_PackingListId", "SuitableRollsToSplit"."Order" AS "SuitableRollsToSplit_Order", "SuitableRollsToSplit"."RollStateId" AS "SuitableRollsToSplit_RollStateId", "SuitableRollsToSplit"."RollState" AS "SuitableRollsToSplit_RollState", "SuitableRollsToSplit"."LocationCategory" AS "SuitableRollsToSplit_LocationCategory" FROM "Api"."vw_SuitableRollsToSplit" "SuitableRollsToSplit" WHERE "SuitableRollsToSplit"."RollId" IN (@0) -- PARAMETERS: [6038]
+[2021-07-14T07:40:45.152Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000,\"SplitWeight\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:40:56.515Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:55:15.871Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:55:25.621Z][SLOW QUERY: 9734 ms]: SELECT "SuitableRollsToSplit"."RollId" AS "SuitableRollsToSplit_RollId", "SuitableRollsToSplit"."ParentRollId" AS "SuitableRollsToSplit_ParentRollId", "SuitableRollsToSplit"."NetWeight" AS "SuitableRollsToSplit_NetWeight", "SuitableRollsToSplit"."NetLength" AS "SuitableRollsToSplit_NetLength", "SuitableRollsToSplit"."PackingListId" AS "SuitableRollsToSplit_PackingListId", "SuitableRollsToSplit"."Order" AS "SuitableRollsToSplit_Order", "SuitableRollsToSplit"."RollStateId" AS "SuitableRollsToSplit_RollStateId", "SuitableRollsToSplit"."RollState" AS "SuitableRollsToSplit_RollState", "SuitableRollsToSplit"."LocationCategory" AS "SuitableRollsToSplit_LocationCategory" FROM "Api"."vw_SuitableRollsToSplit" "SuitableRollsToSplit" WHERE "SuitableRollsToSplit"."RollId" IN (@0) -- PARAMETERS: [6038]
+[2021-07-14T07:55:25.630Z][SLOW QUERY: 9754 ms]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":6038,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:57:01.463Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9077,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:57:02.585Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9077,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T07:57:14.762Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9076,\"NetLength\":2000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:01:36.039Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"order\":\"50000\",\"article\":\"50000\",\"rollCode\":\"50000\",\"uploadedLength\":4500,\"rollWeight\":5300,\"color\":\"50000\",\"lot\":\"50000\",\"invoiceNo\":50000,\"fabricConstruction\":\"50000\",\"shade\":\"50000\",\"receiptNo\":50000,\"prNo\":50000,\"gatePassNo\":50000,\"po\":\"50000\",\"biltyNo\":50000,\"do\":\"50000\",\"driverName\":\"50000\",\"vehicleNo\":\"50000\",\"inspectionNo\":50000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:02:22.317Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9081,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:02:30.365Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"AllocatedTo\":\"WAREHOUSE\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:03:26.936Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"TagId\":20}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:03:34.362Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9081,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:04:27.793Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"AllocatedTo\":\"WAREHOUSE\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:04:37.131Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"RejectedAt\":\"WAREHOUSE\",\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/fabric_inspection","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:06:55.880Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9076,\"NetLength\":2250}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:16:11.485Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"NetLength\":2250}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:16:13.974Z][SLOW QUERY: 2473 ms]: SELECT "SuitableRollsToSplit"."RollId" AS "SuitableRollsToSplit_RollId", "SuitableRollsToSplit"."ParentRollId" AS "SuitableRollsToSplit_ParentRollId", "SuitableRollsToSplit"."NetWeight" AS "SuitableRollsToSplit_NetWeight", "SuitableRollsToSplit"."NetLength" AS "SuitableRollsToSplit_NetLength", "SuitableRollsToSplit"."PackingListId" AS "SuitableRollsToSplit_PackingListId", "SuitableRollsToSplit"."Order" AS "SuitableRollsToSplit_Order", "SuitableRollsToSplit"."RollStateId" AS "SuitableRollsToSplit_RollStateId", "SuitableRollsToSplit"."RollState" AS "SuitableRollsToSplit_RollState", "SuitableRollsToSplit"."LocationCategory" AS "SuitableRollsToSplit_LocationCategory" FROM "Api"."vw_SuitableRollsToSplit" "SuitableRollsToSplit" WHERE "SuitableRollsToSplit"."RollId" IN (@0) -- PARAMETERS: [9081]
+[2021-07-14T08:22:50.913Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9082,\"NetLength\":2250}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:22:52.125Z][SLOW QUERY: 1196 ms]: SELECT "SuitableRollsToSplit"."RollId" AS "SuitableRollsToSplit_RollId", "SuitableRollsToSplit"."ParentRollId" AS "SuitableRollsToSplit_ParentRollId", "SuitableRollsToSplit"."NetWeight" AS "SuitableRollsToSplit_NetWeight", "SuitableRollsToSplit"."NetLength" AS "SuitableRollsToSplit_NetLength", "SuitableRollsToSplit"."PackingListId" AS "SuitableRollsToSplit_PackingListId", "SuitableRollsToSplit"."Order" AS "SuitableRollsToSplit_Order", "SuitableRollsToSplit"."RollStateId" AS "SuitableRollsToSplit_RollStateId", "SuitableRollsToSplit"."RollState" AS "SuitableRollsToSplit_RollState", "SuitableRollsToSplit"."LocationCategory" AS "SuitableRollsToSplit_LocationCategory" FROM "Api"."vw_SuitableRollsToSplit" "SuitableRollsToSplit" WHERE "SuitableRollsToSplit"."RollId" IN (@0) -- PARAMETERS: [9082]
+[2021-07-14T08:24:17.067Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"order\":\"55000\",\"article\":\"55000\",\"rollCode\":\"55000\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"55000\",\"lot\":\"55000\",\"invoiceNo\":55000,\"fabricConstruction\":\"55000\",\"shade\":\"55000\",\"receiptNo\":55000,\"prNo\":55000,\"gatePassNo\":55000,\"po\":\"55000\",\"biltyNo\":55000,\"do\":\"55000\",\"driverName\":\"55000\",\"vehicleNo\":\"55000\",\"inspectionNo\":55000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:24:47.348Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"TagId\":21}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:25:01.283Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:25:21.025Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"AllocatedTo\":\"WAREHOUSE\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:25:31.751Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"RejectedAt\":\"WAREHOUSE\",\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/fabric_inspection","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:25:58.446Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":3000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:48:00.103Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:48:25.152Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:56:25.012Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T08:57:12.064Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:00:52.908Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":5038,\"SplitWeight\":24.7,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:01:09.122Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":5038,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:01:23.948Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:01:25.084Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:04:26.278Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"AllocatedTo\":\"SEWING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:06:01.540Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:07:02.313Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:07:37.691Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:25.171Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:26.200Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:26.831Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:27.496Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:28.034Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:28.646Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:29.226Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:29.705Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:30.285Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:30.661Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:33.495Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:12:48.267Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085,\"AllocatedTo\":\"SEWING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:13:53.340Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9085,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:14:08.651Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:14:09.728Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:14:24.328Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"order\":\"55000\",\"article\":\"55000\",\"rollCode\":\"55000\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"55000\",\"lot\":\"55000\",\"invoiceNo\":55000,\"fabricConstruction\":\"55000\",\"shade\":\"55000\",\"receiptNo\":55000,\"prNo\":55000,\"gatePassNo\":55000,\"po\":\"55000\",\"biltyNo\":55000,\"do\":\"55000\",\"driverName\":\"55000\",\"vehicleNo\":\"55000\",\"inspectionNo\":55000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:14:49.912Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"order\":\"56000\",\"article\":\"56000\",\"rollCode\":\"56000\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"56000\",\"lot\":\"56000\",\"invoiceNo\":56000,\"fabricConstruction\":\"56000\",\"shade\":\"56000\",\"receiptNo\":56000,\"prNo\":56000,\"gatePassNo\":56000,\"po\":\"56000\",\"biltyNo\":56000,\"do\":\"56000\",\"driverName\":\"56000\",\"vehicleNo\":\"56000\",\"inspectionNo\":56000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:15:11.007Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:15:21.939Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9086,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:15:39.647Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/clear_allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:15:50.958Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9087}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/clear_allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:15:56.979Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9085,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:16.100Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9086,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:29.416Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"TagId\":22}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:31.959Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"TagId\":22}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:38.721Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9086,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:45.351Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:46.442Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:47.230Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:16:55.286Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/clear_allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:18:15.181Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9086,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:18:16.706Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9086,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:18:24.740Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:18:34.593Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"RejectedAt\":\"WAREHOUSE\",\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/fabric_inspection","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:19:12.836Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:20:06.674Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:20:44.100Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:20:44.959Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:20:49.901Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/clear_allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:21:42.873Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"AllocatedTo\":\"SEWING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:37.511Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:38.270Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:38.886Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:39.302Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:40.137Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:40.529Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T09:22:40.928Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-14T11:49:41.789Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9086,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T11:51:09.631Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"NetLength\":1500}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T11:54:11.636Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9081,\"NetLength\":1500}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:07:59.166Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:14:03.823Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:14:22.416Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:22:13.706Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:27:49.367Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9084,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:29:27.793Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:29:45.940Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:30:41.144Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/clear_allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:31:39.375Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:31:41.661Z][SLOW QUERY: 1509 ms]: SELECT "Allocations"."AllocationId" AS "Allocations_AllocationId", "Allocations"."CreatedAt" AS "Allocations_CreatedAt", "Allocations"."UpdatedAt" AS "Allocations_UpdatedAt", "Allocations"."UpdatedAtDate" AS "Allocations_UpdatedAtDate", "Allocations"."RollId" AS "Allocations_RollId", "Allocations"."AllocationStatus" AS "Allocations_AllocationStatus", "Allocations"."AllocatedTo" AS "Allocations_AllocatedTo", "Allocations"."IsLatest" AS "Allocations_IsLatest" FROM "Data"."Allocations" "Allocations" WHERE "Allocations"."RollId" IN (@0) AND "Allocations"."AllocationStatus" = @1 -- PARAMETERS: [9079,"PENDING"]
+[2021-07-14T12:32:16.369Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"AllocatedTo\":\"SEWING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:33:55.767Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"TagId\":25}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:34:17.314Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.172","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:34:19.521Z][SLOW QUERY: 2027 ms]: SELECT "Allocations"."AllocationId" AS "Allocations_AllocationId", "Allocations"."CreatedAt" AS "Allocations_CreatedAt", "Allocations"."UpdatedAt" AS "Allocations_UpdatedAt", "Allocations"."UpdatedAtDate" AS "Allocations_UpdatedAtDate", "Allocations"."RollId" AS "Allocations_RollId", "Allocations"."AllocationStatus" AS "Allocations_AllocationStatus", "Allocations"."AllocatedTo" AS "Allocations_AllocatedTo", "Allocations"."IsLatest" AS "Allocations_IsLatest" FROM "Data"."Allocations" "Allocations" WHERE "Allocations"."RollId" IN (@0) AND "Allocations"."AllocationStatus" = @1 -- PARAMETERS: [9079,"PENDING"]
+[2021-07-14T12:36:33.802Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:38:18.204Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:38:25.334Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:39:01.799Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9079,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:52:28.472Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:54:47.873Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:56:13.246Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:57:18.180Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T12:59:17.500Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:00:16.431Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:01:04.319Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:02:36.154Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:04:12.088Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:05:29.904Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:05:29.920Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9079,9079,2]
+[2021-07-14T13:08:52.303Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:09:47.617Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:13:02.611Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9079,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:13:02.626Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9079,9079,2]
+[2021-07-14T13:24:30.220Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"TagId\":23}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/assign_tag","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:24:43.071Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"AllocatedTo\":\"CUTTING\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/allocation","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:24:50.799Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:25:29.663Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:25:42.209Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:25:50.577Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:26:01.355Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:28:10.981Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:28:18.222Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:28:45.704Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:29:05.242Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:29:12.525Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:38:34.720Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:55:35.851Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:55:35.916Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T13:59:43.707Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T13:59:43.716Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T14:03:07.718Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:03:07.726Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T14:03:55.007Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:03:55.014Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T14:10:38.679Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:10:38.695Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T14:13:32.621Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:13:32.636Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-14T14:14:06.871Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:15:48.859Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-14T14:15:58.796Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9080,\"IsRejected\":false}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin_allocation_execution","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:23:35.752Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:23:35.797Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-15T06:24:13.001Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:41:23.547Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:41:24.722Z][SLOW QUERY: 1154 ms]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-15T06:43:09.785Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:43:09.807Z][QUERY]: SELECT "ReadyToWarehouseStockOutRolls"."RollId" AS "ReadyToWarehouseStockOutRolls_RollId", "ReadyToWarehouseStockOutRolls"."PackingListId" AS "ReadyToWarehouseStockOutRolls_PackingListId", "ReadyToWarehouseStockOutRolls"."ParentRollId" AS "ReadyToWarehouseStockOutRolls_ParentRollId", "ReadyToWarehouseStockOutRolls"."RollStateId" AS "ReadyToWarehouseStockOutRolls_RollStateId", "ReadyToWarehouseStockOutRolls"."RollState" AS "ReadyToWarehouseStockOutRolls_RollState", "ReadyToWarehouseStockOutRolls"."LocationCategory" AS "ReadyToWarehouseStockOutRolls_LocationCategory", "ReadyToWarehouseStockOutRolls"."Order" AS "ReadyToWarehouseStockOutRolls_Order", "ReadyToWarehouseStockOutRolls"."NetWeight" AS "ReadyToWarehouseStockOutRolls_NetWeight", "ReadyToWarehouseStockOutRolls"."Lot" AS "ReadyToWarehouseStockOutRolls_Lot", "ReadyToWarehouseStockOutRolls"."AllocationId" AS "ReadyToWarehouseStockOutRolls_AllocationId", "ReadyToWarehouseStockOutRolls"."AllocationStatus" AS "ReadyToWarehouseStockOutRolls_AllocationStatus", "ReadyToWarehouseStockOutRolls"."AllocatedTo" AS "ReadyToWarehouseStockOutRolls_AllocatedTo" FROM "Api"."vw_ReadyToWarehouseStockOutRolls" "ReadyToWarehouseStockOutRolls" WHERE "ReadyToWarehouseStockOutRolls"."RollId" IN (@0) -- PARAMETERS: [9080]
+[2021-07-15T06:43:14.690Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockout","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:43:14.695Z][QUERY]: SELECT "ReadyToWarehouseStockOutRolls"."RollId" AS "ReadyToWarehouseStockOutRolls_RollId", "ReadyToWarehouseStockOutRolls"."PackingListId" AS "ReadyToWarehouseStockOutRolls_PackingListId", "ReadyToWarehouseStockOutRolls"."ParentRollId" AS "ReadyToWarehouseStockOutRolls_ParentRollId", "ReadyToWarehouseStockOutRolls"."RollStateId" AS "ReadyToWarehouseStockOutRolls_RollStateId", "ReadyToWarehouseStockOutRolls"."RollState" AS "ReadyToWarehouseStockOutRolls_RollState", "ReadyToWarehouseStockOutRolls"."LocationCategory" AS "ReadyToWarehouseStockOutRolls_LocationCategory", "ReadyToWarehouseStockOutRolls"."Order" AS "ReadyToWarehouseStockOutRolls_Order", "ReadyToWarehouseStockOutRolls"."NetWeight" AS "ReadyToWarehouseStockOutRolls_NetWeight", "ReadyToWarehouseStockOutRolls"."Lot" AS "ReadyToWarehouseStockOutRolls_Lot", "ReadyToWarehouseStockOutRolls"."AllocationId" AS "ReadyToWarehouseStockOutRolls_AllocationId", "ReadyToWarehouseStockOutRolls"."AllocationStatus" AS "ReadyToWarehouseStockOutRolls_AllocationStatus", "ReadyToWarehouseStockOutRolls"."AllocatedTo" AS "ReadyToWarehouseStockOutRolls_AllocatedTo" FROM "Api"."vw_ReadyToWarehouseStockOutRolls" "ReadyToWarehouseStockOutRolls" WHERE "ReadyToWarehouseStockOutRolls"."RollId" IN (@0) -- PARAMETERS: [9080]
+[2021-07-15T06:43:17.962Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"rollId\":9080,\"isManual\":true}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/stockin","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:43:17.964Z][QUERY]: SELECT "ReadyToWarehouseStockInRolls"."RollId" AS "ReadyToWarehouseStockInRolls_RollId", "ReadyToWarehouseStockInRolls"."PackingListId" AS "ReadyToWarehouseStockInRolls_PackingListId", "ReadyToWarehouseStockInRolls"."ParentRollId" AS "ReadyToWarehouseStockInRolls_ParentRollId", "ReadyToWarehouseStockInRolls"."RollStateId" AS "ReadyToWarehouseStockInRolls_RollStateId", "ReadyToWarehouseStockInRolls"."RollState" AS "ReadyToWarehouseStockInRolls_RollState", "ReadyToWarehouseStockInRolls"."LastAllocationId" AS "ReadyToWarehouseStockInRolls_LastAllocationId", "ReadyToWarehouseStockInRolls"."Order" AS "ReadyToWarehouseStockInRolls_Order", "ReadyToWarehouseStockInRolls"."NetWeight" AS "ReadyToWarehouseStockInRolls_NetWeight", "ReadyToWarehouseStockInRolls"."IsCardAssigned" AS "ReadyToWarehouseStockInRolls_IsCardAssigned", "ReadyToWarehouseStockInRolls"."CardAssignmentTimestamp" AS "ReadyToWarehouseStockInRolls_CardAssignmentTimestamp" FROM "Api"."vw_ReadyToWarehouseStockInRolls" "ReadyToWarehouseStockInRolls" WHERE ("ReadyToWarehouseStockInRolls"."RollId" IN (@0) AND "ReadyToWarehouseStockInRolls"."LastAllocationId" IS NULL) OR ("ReadyToWarehouseStockInRolls"."RollId" IN (@1) AND "ReadyToWarehouseStockInRolls"."RollStateId" = @2) -- PARAMETERS: [9080,9080,2]
+[2021-07-15T06:50:37.127Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:50:37.131Z][QUERY]: SELECT "ReturnAllocatedRolls"."RollId" AS "ReturnAllocatedRolls_RollId", "ReturnAllocatedRolls"."PackingListId" AS "ReturnAllocatedRolls_PackingListId", "ReturnAllocatedRolls"."ParentRollId" AS "ReturnAllocatedRolls_ParentRollId", "ReturnAllocatedRolls"."IsCardAssigned" AS "ReturnAllocatedRolls_IsCardAssigned", "ReturnAllocatedRolls"."CardAssignmentTimestamp" AS "ReturnAllocatedRolls_CardAssignmentTimestamp", "ReturnAllocatedRolls"."RollStateId" AS "ReturnAllocatedRolls_RollStateId", "ReturnAllocatedRolls"."RollState" AS "ReturnAllocatedRolls_RollState", "ReturnAllocatedRolls"."LastAllocationId" AS "ReturnAllocatedRolls_LastAllocationId", "ReturnAllocatedRolls"."Order" AS "ReturnAllocatedRolls_Order", "ReturnAllocatedRolls"."NetWeight" AS "ReturnAllocatedRolls_NetWeight", "ReturnAllocatedRolls"."NetLength" AS "ReturnAllocatedRolls_NetLength" FROM "Api"."vw_ReturnAllocatedRolls" "ReturnAllocatedRolls" WHERE "ReturnAllocatedRolls"."RollId" IN (@0) AND "ReturnAllocatedRolls"."RollStateId" IN (@1, @2, @3) -- PARAMETERS: [9084,10,12,14]
+[2021-07-15T06:53:10.838Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9084,\"NetLength\":12}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/roll_split_at_return","type":"nvarchar","params":["64"]}]
+[2021-07-15T06:53:10.840Z][QUERY]: SELECT "ReturnAllocatedRolls"."RollId" AS "ReturnAllocatedRolls_RollId", "ReturnAllocatedRolls"."PackingListId" AS "ReturnAllocatedRolls_PackingListId", "ReturnAllocatedRolls"."ParentRollId" AS "ReturnAllocatedRolls_ParentRollId", "ReturnAllocatedRolls"."IsCardAssigned" AS "ReturnAllocatedRolls_IsCardAssigned", "ReturnAllocatedRolls"."CardAssignmentTimestamp" AS "ReturnAllocatedRolls_CardAssignmentTimestamp", "ReturnAllocatedRolls"."RollStateId" AS "ReturnAllocatedRolls_RollStateId", "ReturnAllocatedRolls"."RollState" AS "ReturnAllocatedRolls_RollState", "ReturnAllocatedRolls"."LastAllocationId" AS "ReturnAllocatedRolls_LastAllocationId", "ReturnAllocatedRolls"."Order" AS "ReturnAllocatedRolls_Order", "ReturnAllocatedRolls"."NetWeight" AS "ReturnAllocatedRolls_NetWeight", "ReturnAllocatedRolls"."NetLength" AS "ReturnAllocatedRolls_NetLength" FROM "Api"."vw_ReturnAllocatedRolls" "ReturnAllocatedRolls" WHERE "ReturnAllocatedRolls"."RollId" IN (@0) AND "ReturnAllocatedRolls"."RollStateId" IN (@1, @2, @3) -- PARAMETERS: [9084,10,12,14]
+[2021-07-15T07:40:35.137Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"{\"UserName\":\"testUser\",\"UserPassword\":\"12345\"}","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Verify_Login","type":"nvarchar","params":["64"]}]
+[2021-07-15T07:40:37.632Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"{\"UserName\":\"testUser\",\"UserPassword\":\"123456\"}","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Verify_Login","type":"nvarchar","params":["64"]}]
+[2021-07-15T09:11:42.754Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"56000\",\"article\":\"56000\",\"rollCode\":\"56000\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"56000\",\"lot\":\"56000\",\"invoiceNo\":56000,\"fabricConstruction\":\"56000\",\"shade\":\"56000\",\"receiptNo\":56000,\"prNo\":56000,\"gatePassNo\":56000,\"po\":\"56000\",\"biltyNo\":56000,\"do\":\"56000\",\"driverName\":\"56000\",\"vehicleNo\":\"56000\",\"inspectionNo\":56000}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T09:12:26.953Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"99999\",\"article\":\"99999\",\"rollCode\":\"99999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"99999\",\"lot\":\"99999\",\"invoiceNo\":99999,\"fabricConstruction\":\"99999\",\"shade\":\"99999\",\"receiptNo\":99999,\"prNo\":99999,\"gatePassNo\":99999,\"po\":\"99999\",\"biltyNo\":99999,\"do\":\"99999\",\"driverName\":\"99999\",\"vehicleNo\":\"99999\",\"inspectionNo\":99999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T09:12:43.981Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"order\":\"99999\",\"article\":\"99999\",\"rollCode\":\"99999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"99999\",\"lot\":\"99999\",\"invoiceNo\":99999,\"fabricConstruction\":\"99999\",\"shade\":\"99999\",\"receiptNo\":99999,\"prNo\":99999,\"gatePassNo\":99999,\"po\":\"99999\",\"biltyNo\":99999,\"do\":\"99999\",\"driverName\":\"99999\",\"vehicleNo\":\"99999\",\"inspectionNo\":99999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T09:13:19.464Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T09:14:09.951Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T12:53:41.345Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":12,\"rollWeight\":12,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"2\",\"uploadedLength\":0,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"3\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"10\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T12:53:46.985Z][SLOW QUERY: 5606 ms]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":12,\"rollWeight\":12,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"2\",\"uploadedLength\":0,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"3\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"10\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T12:56:49.405Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":12,\"rollWeight\":12,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"2\",\"uploadedLength\":0,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test2\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test2\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"3\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"10\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test22\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"11\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:00:37.620Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"{\"UserName\":\"test\",\"UserPassword\":\"12345\"}","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Verify_Login","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:00:41.480Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"{\"UserName\":\"testUser\",\"UserPassword\":\"123456\"}","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Verify_Login","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:05:27.166Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:06:00.063Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:06:56.225Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test1\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:14:04.484Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:20:30.292Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:21:05.140Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:22:34.598Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:30.120Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:31.187Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:31.867Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:32.511Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:33.047Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:33.628Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:34.163Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:34.772Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:35.320Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:35.876Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:23:36.389Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.88","type":"nvarchar","params":["32"]},{"value":"[{\"Order\":\"999\",\"article\":\"999\",\"rollCode\":\"999\",\"uploadedLength\":4500,\"rollWeight\":5800,\"color\":\"999\",\"lot\":\"999\",\"invoiceNo\":99999,\"fabricConstruction\":\"999\",\"shade\":\"999\",\"receiptNo\":999,\"prNo\":999,\"gatePassNo\":999,\"po\":\"999\",\"biltyNo\":999,\"do\":\"999\",\"driverName\":\"999\",\"vehicleNo\":\"999\",\"inspectionNo\":999}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/transactions/upload_packinglist","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:24:35.405Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:35.596Z\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:35.596Z\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:35.596Z\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:24:56.381Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:56.147Z\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:56.147Z\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"est\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-07-15T13:24:56.147Z\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:26:17.962Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:29:52.289Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"2\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"2\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:30:13.178Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"13\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"},{\"packingListCode\":11,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"14\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":0,\"uploadDate\":\"2021-7-15\"}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:31:55.134Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":12,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"16\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":12,\"order\":\"test\",\"article\":\"test\",\"color\":\"test\",\"lot\":\"test\",\"invoiceNo\":\"test\",\"customer\":\"test\",\"supplier\":\"test\",\"fabricType\":\"test\",\"fabricWidth\":20,\"gsm\":\"test\",\"rollCode\":\"17\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:31:57.798Z][SLOW QUERY: 1492 ms]: SELECT "ErrorsList"."ErrorId" AS "ErrorsList_ErrorId", "ErrorsList"."CreatedAt" AS "ErrorsList_CreatedAt", "ErrorsList"."UpdatedAt" AS "ErrorsList_UpdatedAt", "ErrorsList"."ErrorType" AS "ErrorsList_ErrorType", "ErrorsList"."ErrorNumber" AS "ErrorsList_ErrorNumber", "ErrorsList"."ErrorMessage" AS "ErrorsList_ErrorMessage" FROM "Logging"."ErrorsList" "ErrorsList"
+[2021-07-15T13:35:58.734Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"packingListCode\":13,\"order\":\"test2\",\"article\":\"test2\",\"color\":\"test2\",\"lot\":\"test2\",\"invoiceNo\":\"test2\",\"customer\":\"test2\",\"supplier\":\"test2\",\"fabricType\":\"test2\",\"fabricWidth\":20,\"gsm\":\"test2\",\"rollCode\":\"20\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":13,\"order\":\"test2\",\"article\":\"test2\",\"color\":\"test2\",\"lot\":\"test2\",\"invoiceNo\":\"test2\",\"customer\":\"test2\",\"supplier\":\"test2\",\"fabricType\":\"test2\",\"fabricWidth\":20,\"gsm\":\"test2\",\"rollCode\":\"21\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1},{\"packingListCode\":13,\"order\":\"test2\",\"article\":\"test2\",\"color\":\"test2\",\"lot\":\"test2\",\"invoiceNo\":\"test2\",\"customer\":\"test2\",\"supplier\":\"test2\",\"fabricType\":\"test2\",\"fabricWidth\":20,\"gsm\":\"test2\",\"rollCode\":\"22\",\"uploadedLength\":1,\"rollWeight\":1,\"forSampling\":1}]","type":"nvarchar","params":[]},{"value":"POST","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Upload_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:36:00.952Z][QUERY]: SELECT "ErrorsList"."ErrorId" AS "ErrorsList_ErrorId", "ErrorsList"."CreatedAt" AS "ErrorsList_CreatedAt", "ErrorsList"."UpdatedAt" AS "ErrorsList_UpdatedAt", "ErrorsList"."ErrorType" AS "ErrorsList_ErrorType", "ErrorsList"."ErrorNumber" AS "ErrorsList_ErrorNumber", "ErrorsList"."ErrorMessage" AS "ErrorsList_ErrorMessage" FROM "Logging"."ErrorsList" "ErrorsList"
+[2021-07-15T13:39:08.594Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"{\"PackingListCode\":13}","type":"nvarchar","params":[]},{"value":"DELETE","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Delete_PackingList","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:39:46.107Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9076,\"Location\":{\"Locator\":20,\"Rack\":50}}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Update_Location","type":"nvarchar","params":["64"]}]
+[2021-07-15T13:39:50.589Z][QUERY]: DECLARE @OutputTable TABLE ("AppLogId" int, "CreatedAt" datetime, "UpdatedAt" datetime, "RequestApi" nvarchar(64));
+
+INSERT INTO "Logging"."ApplicationLog"("CreatedAt", "UpdatedAt", "RequestIpAddr", "RequestBody", "RequestType", "RequestApi") OUTPUT INSERTED."AppLogId", INSERTED."CreatedAt", INSERTED."UpdatedAt", INSERTED."RequestApi" INTO @OutputTable VALUES (DEFAULT, DEFAULT, @0, @1, @2, @3);
+
+SELECT * FROM @OutputTable -- PARAMETERS: [{"value":"::ffff:192.168.88.11","type":"nvarchar","params":["32"]},{"value":"[{\"RollId\":9076,\"Location\":{}}]","type":"nvarchar","params":[]},{"value":"PUT","type":"nvarchar","params":["8"]},{"value":"/api/v1/Transactions/Update_Location","type":"nvarchar","params":["64"]}]

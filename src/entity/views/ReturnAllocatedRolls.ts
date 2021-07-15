@@ -59,6 +59,13 @@ export class ReturnAllocatedRolls {
   })
   NetWeight: number;
 
+  @Column({
+    type: 'decimal',
+    precision: 10,
+    scale: 4,
+  })
+  NetLength: number;
+
   // @Column({
   //   type: 'nvarchar',
   //   length: 128,

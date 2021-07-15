@@ -22,12 +22,6 @@ __decorate([
     class_validator_1.IsNumber(),
     class_validator_1.IsPositive(),
     __metadata("design:type", Number)
-], RollSplit.prototype, "SplitWeight", void 0);
-__decorate([
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsNumber(),
-    class_validator_1.IsPositive(),
-    __metadata("design:type", Number)
 ], RollSplit.prototype, "NetLength", void 0);
 __decorate([
     class_validator_1.IsOptional(),

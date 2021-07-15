@@ -77,6 +77,14 @@ __decorate([
     }),
     __metadata("design:type", Number)
 ], ReturnAllocatedRolls.prototype, "NetWeight", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'decimal',
+        precision: 10,
+        scale: 4,
+    }),
+    __metadata("design:type", Number)
+], ReturnAllocatedRolls.prototype, "NetLength", void 0);
 ReturnAllocatedRolls = __decorate([
     typeorm_1.ViewEntity({
         schema: 'Api',

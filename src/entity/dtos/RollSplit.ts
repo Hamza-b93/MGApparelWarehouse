@@ -11,10 +11,10 @@ export default class RollSplit {
   @IsNumber()
   RollId: number;
 
-  @IsNotEmpty()
-  @IsNumber()
-  @IsPositive()
-  SplitWeight: number;
+  // @IsNotEmpty()
+  // @IsNumber()
+  // @IsPositive()
+  // SplitWeight: number;
 
   @IsNotEmpty()
   @IsNumber()

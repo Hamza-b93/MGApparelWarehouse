@@ -16,6 +16,9 @@ export class PackingList {
   @PrimaryGeneratedColumn({ type: "int", name: "PackingListId" })
   packingListId: number;
 
+  @Column({ type: "int", name: "PackingListCode" })
+  packingListCode: number;
+
   @Column("datetime", { name: "CreatedAt", default: () => "getdate()" })
   createdAt: Date;
 
@@ -116,6 +119,7 @@ export class PackingList {
   @Column("varchar", { name: "GSM", nullable: true, length: 64 })
   gsm: string | null;
 
-  @OneToMany(() => Rolls, (rolls) => rolls.packingList)
-  rolls: Rolls[];
+  @Column("bit", { name: "ForSampling", default: () => "(0)" })
+  forSampling: boolean;
+
 }

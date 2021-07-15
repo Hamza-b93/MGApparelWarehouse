@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Tag = void 0;
 const typeorm_1 = require("typeorm");
-const Rolls_1 = require("./Rolls");
 let Tag = class Tag {
 };
 __decorate([
@@ -30,11 +29,6 @@ __decorate([
     typeorm_1.Column({ type: "int", name: "RollID" }),
     __metadata("design:type", Number)
 ], Tag.prototype, "rollId", void 0);
-__decorate([
-    typeorm_1.ManyToOne(() => Rolls_1.Rolls, (rolls) => rolls.tags),
-    typeorm_1.JoinColumn([{ name: "RollID", referencedColumnName: "rollId" }]),
-    __metadata("design:type", Rolls_1.Rolls)
-], Tag.prototype, "roll", void 0);
 Tag = __decorate([
     typeorm_1.Index("PK_TagID", ["tagId"], { unique: true }),
     typeorm_1.Entity("Tag", { schema: "Essentials" })

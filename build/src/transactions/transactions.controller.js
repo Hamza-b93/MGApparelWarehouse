@@ -215,6 +215,7 @@ let TransactionsController = class TransactionsController {
                     },
                 ],
             });
+            console.log(toStockInRolls);
             if (toStockInRolls.length == 0) {
                 throw new common_1.NotFoundException(new ApiResponse_1.default(common_1.HttpStatus.NOT_FOUND, 'Invalid Rolls. Rolls are not available for stocking in.', stockIn));
             }
@@ -231,6 +232,7 @@ let TransactionsController = class TransactionsController {
             if (returningRolls.length > 0) {
                 const rollIds = returningRolls.map((roll) => roll.RollId);
                 const toReturningRolls = stockIn.filter((roll) => rollIds.includes(roll.rollId));
+                console.log(toReturningRolls);
                 returnedRolls = await this.transactionsService.stockInAllocation(toReturningRolls);
             }
             //     // if any of one type or rolls are received, handle response accordingly.
@@ -405,7 +407,7 @@ let TransactionsController = class TransactionsController {
             //     // remove rolls which are not found.
             const toSplitRolls = await Promise.all(allRolls.filter((roll) => {
                 const splitRoll = rollSplit.find((roll2) => roll2.RollId == roll.RollId);
-                //return splitRoll.SplitWeight < roll.NetWeight;
+                return splitRoll.NetLength < roll.NetLength;
             }));
             if (toSplitRolls.length == 0) {
                 throw new common_1.NotFoundException(new ApiResponse_1.default(common_1.HttpStatus.NOT_FOUND, 'Invalid Rolls. Rolls are not available for splitting.', rollSplit));
@@ -415,9 +417,9 @@ let TransactionsController = class TransactionsController {
                 //       // also filter out rolls which have split weight >= netweight.
                 const presentIds = toSplitRolls.map((roll) => roll.RollId);
                 const toSplitRolls2 = rollSplit.filter((roll) => presentIds.includes(roll.RollId) &&
-                    roll.SplitWeight <
+                    roll.NetLength <
                         toSplitRolls.find((roll2) => roll2.RollId == roll.RollId)
-                            .NetWeight);
+                            .NetLength);
                 const splittedRolls = await this.transactionsService.rollSplit(toSplitRolls2);
                 const absentIds = rollIds.filter((id) => !presentIds.includes(id));
                 throw new common_1.BadRequestException(new ApiResponse_1.default(common_1.HttpStatus.BAD_REQUEST, 'Missing Rolls. Some rolls are not available for splitting.', {
@@ -428,8 +430,8 @@ let TransactionsController = class TransactionsController {
             //     // filter out rolls which have been found out from above request.
             const presentIds = toSplitRolls.map((roll) => roll.RollId);
             const toSplitRolls2 = rollSplit.filter((roll) => presentIds.includes(roll.RollId) &&
-                roll.SplitWeight <
-                    toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetWeight);
+                roll.NetLength <
+                    toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetLength);
             return await this.transactionsService.rollSplit(toSplitRolls2);
         }
         catch (ex) {
@@ -459,9 +461,9 @@ let TransactionsController = class TransactionsController {
                 // also filter out rolls which have split weight >= netweight.
                 const presentIds = toSplitRolls.map((roll) => roll.RollId);
                 const toSplitRolls2 = rollSplit.filter((roll) => presentIds.includes(roll.RollId) &&
-                    roll.SplitWeight <
+                    roll.NetLength <
                         toSplitRolls.find((roll2) => roll2.RollId == roll.RollId)
-                            .NetWeight);
+                            .NetLength);
                 const splittedRolls = await this.transactionsService.rollSplit(toSplitRolls2);
                 const absentIds = rollIds.filter((id) => !presentIds.includes(id));
                 throw new common_1.BadRequestException(new ApiResponse_1.default(common_1.HttpStatus.BAD_REQUEST, 'Missing Rolls. Some rolls are not available for splitting.', {
@@ -472,8 +474,8 @@ let TransactionsController = class TransactionsController {
             //     // filter out rolls which have been found out from above request.
             const presentIds = toSplitRolls.map((roll) => roll.RollId);
             const toSplitRolls2 = rollSplit.filter((roll) => presentIds.includes(roll.RollId) &&
-                roll.SplitWeight <
-                    toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetWeight);
+                roll.NetLength <
+                    toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetLength);
             return await this.transactionsService.rollSplit(toSplitRolls2);
         }
         catch (ex) {

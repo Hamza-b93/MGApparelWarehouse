@@ -7,21 +7,8 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from "typeorm";
-import { Rolls } from "./Rolls";
 
-@Index("Allocations_AllocationId_uindex", ["allocationId"], { unique: true })
-@Index("Allocations_pk", ["allocationId"], { unique: true })
-@Index("ClusteredIndex-20210507-101932", ["allocationId"], { unique: true })
-@Index(
-  "NonClusteredIndex-20210507-101946",
-  ["allocationStatus", "allocatedTo", "rollId", "allocationId"],
-  {}
-)
-@Index(
-  "NonClusteredIndex-20210507-102110",
-  ["allocationStatus", "allocatedTo", "allocationId"],
-  { unique: true }
-)
+
 @Entity("Allocations", { schema: "Data" })
 export class Allocations {
   @PrimaryGeneratedColumn({ type: "int", name: "AllocationId" })
@@ -51,11 +38,4 @@ export class Allocations {
 
   @Column("bit", { name: "IsLatest" })
   isLatest: number;
-
-  @ManyToOne(() => Rolls, (rolls) => rolls.allocations)
-  @JoinColumn([{ name: "RollId", referencedColumnName: "rollId" }])
-  roll: Rolls;
-
-  @OneToMany(() => Rolls, (rolls) => rolls.lastAllocation)
-  rolls: Rolls[];
 }

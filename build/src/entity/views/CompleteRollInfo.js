@@ -158,11 +158,24 @@ __decorate([
 ], CompleteRollInfo.prototype, "UploadDate", void 0);
 __decorate([
     typeorm_1.Column({
+        type: 'int',
+    }),
+    __metadata("design:type", Number)
+], CompleteRollInfo.prototype, "PackingListCode", void 0);
+__decorate([
+    typeorm_1.Column({
         type: 'nvarchar',
         length: 64,
     }),
     __metadata("design:type", String)
 ], CompleteRollInfo.prototype, "Order", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'nvarchar',
+        length: 64,
+    }),
+    __metadata("design:type", String)
+], CompleteRollInfo.prototype, "FabricType", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'nvarchar',
@@ -186,11 +199,47 @@ __decorate([
 ], CompleteRollInfo.prototype, "FabricConstruction", void 0);
 __decorate([
     typeorm_1.Column({
+        type: 'decimal',
+        precision: 10,
+        scale: 4,
+    }),
+    __metadata("design:type", Number)
+], CompleteRollInfo.prototype, "FabricWidth", void 0);
+__decorate([
+    typeorm_1.Column({
         type: 'nvarchar',
-        length: 32,
+        length: 64,
+    }),
+    __metadata("design:type", String)
+], CompleteRollInfo.prototype, "Customer", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'nvarchar',
+        length: 8,
+    }),
+    __metadata("design:type", String)
+], CompleteRollInfo.prototype, "GSM", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'nvarchar',
+        length: 64,
     }),
     __metadata("design:type", String)
 ], CompleteRollInfo.prototype, "Supplier", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'nvarchar',
+        length: 16,
+    }),
+    __metadata("design:type", String)
+], CompleteRollInfo.prototype, "SupplierLot", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'nvarchar',
+        length: 16,
+    }),
+    __metadata("design:type", String)
+], CompleteRollInfo.prototype, "SupplierRollId", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'smallint',

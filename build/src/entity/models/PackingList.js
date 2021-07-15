@@ -11,13 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackingList = void 0;
 const typeorm_1 = require("typeorm");
-const Rolls_1 = require("./Rolls");
 let PackingList = class PackingList {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn({ type: "int", name: "PackingListId" }),
     __metadata("design:type", Number)
 ], PackingList.prototype, "packingListId", void 0);
+__decorate([
+    typeorm_1.Column({ type: "int", name: "PackingListCode" }),
+    __metadata("design:type", Number)
+], PackingList.prototype, "packingListCode", void 0);
 __decorate([
     typeorm_1.Column("datetime", { name: "CreatedAt", default: () => "getdate()" }),
     __metadata("design:type", Date)
@@ -151,9 +154,9 @@ __decorate([
     __metadata("design:type", String)
 ], PackingList.prototype, "gsm", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => Rolls_1.Rolls, (rolls) => rolls.packingList),
-    __metadata("design:type", Array)
-], PackingList.prototype, "rolls", void 0);
+    typeorm_1.Column("bit", { name: "ForSampling", default: () => "(0)" }),
+    __metadata("design:type", Boolean)
+], PackingList.prototype, "forSampling", void 0);
 PackingList = __decorate([
     typeorm_1.Index("ClusteredIndex-20210507-111419", ["packingListId"], { unique: true }),
     typeorm_1.Index("PackingList_PackingListID_uindex", ["packingListId"], { unique: true }),

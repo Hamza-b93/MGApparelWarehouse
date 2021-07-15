@@ -125,10 +125,10 @@ export class CompleteRollInfo {
   })
   UploadDate: Date;
 
-  // @Column({
-  //   type: 'int',
-  // })
-  // PackingListCode: number;
+  @Column({
+    type: 'int',
+  })
+  PackingListCode: number;
 
   // @Column({
   //   type: 'decimal',
@@ -151,6 +151,12 @@ export class CompleteRollInfo {
 
   @Column({
     type: 'nvarchar',
+    length: 64,
+  })
+  FabricType: string;
+
+  @Column({
+    type: 'nvarchar',
     length: 128,
   })
   Color: string;
@@ -167,12 +173,12 @@ export class CompleteRollInfo {
   })
   FabricConstruction: string;
 
-  // @Column({
-  //   type: 'decimal',
-  //   precision: 10,
-  //   scale: 4,
-  // })
-  // FabricWidth: number;
+  @Column({
+    type: 'decimal',
+    precision: 10,
+    scale: 4,
+  })
+  FabricWidth: number;
 
   // @Column({
   //   type: 'decimal',
@@ -211,11 +217,11 @@ export class CompleteRollInfo {
   // })
   // IgpDate: string;
 
-  // @Column({
-  //   type: 'nvarchar',
-  //   length: 64,
-  // })
-  // Customer: string;
+  @Column({
+    type: 'nvarchar',
+    length: 64,
+  })
+  Customer: string;
 
   // @Column({
   //   type: 'nvarchar',
@@ -229,11 +235,11 @@ export class CompleteRollInfo {
   // })
   // Dcn: string;
 
-  @Column({
-    type: 'nvarchar',
-    length: 32,
-  })
-  Supplier: string;
+  // @Column({
+  //   type: 'nvarchar',
+  //   length: 32,
+  // })
+  // Supplier: string;
 
   // @Column({
   //   type: 'nvarchar',
@@ -241,29 +247,29 @@ export class CompleteRollInfo {
   // })
   // YarnLot: string;
 
-  // @Column({
-  //   type: 'nvarchar',
-  //   length: 8,
-  // })
-  // Gsm: string;
+  @Column({
+    type: 'nvarchar',
+    length: 8,
+  })
+  GSM: string;
 
-  // @Column({
-  //   type: 'nvarchar',
-  //   length: 64,
-  // })
-  // Supplier: string;
+  @Column({
+    type: 'nvarchar',
+    length: 64,
+  })
+  Supplier: string;
 
-  // @Column({
-  //   type: 'nvarchar',
-  //   length: 16,
-  // })
-  // SupplierLot: string;
+  @Column({
+    type: 'nvarchar',
+    length: 16,
+  })
+  SupplierLot: string;
 
-  // @Column({
-  //   type: 'nvarchar',
-  //   length: 16,
-  // })
-  // SupplierRollId: string;
+  @Column({
+    type: 'nvarchar',
+    length: 16,
+  })
+  SupplierRollId: string;
 
   // @Column({
   //   type: 'int',

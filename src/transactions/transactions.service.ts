@@ -18,7 +18,6 @@ import { ErrorsList } from '../entity/models/ErrorsList';
 import { Allocations } from '../entity/models/Allocations';
 import { RollStates } from '../entity/models/RollStates';
 import WarehouseTransaction from '../entity/dtos/WarehouseTransaction';
-import { CardAssignableRolls } from '../entity/views/CardAssignableRolls';
 import AllocatedTo from '../entity/dtos/AllocatedTo';
 import RollSplit from '../entity/dtos/RollSplit';
 import ClearAllocation from '../entity/dtos/ClearAllocation';
@@ -27,7 +26,6 @@ import UpdateOrder from '../entity/dtos/UpdateOrder';
 import FabricInspection from '../entity/dtos/FabricInspection';
 import ReturnStock from '../entity/dtos/ReturnStock';
 import AssignTag from '../entity/dtos/AssignTag';
-import { SuitableRollsToSplit } from '../entity/views/SuitableRollsToSplit';
 
 
 @Injectable()
@@ -108,28 +106,28 @@ export class TransactionsService {
         if (packingList.shade ?? null)
           packingList.shade =
             packingList.shade.toUpperCase();
-        // if (packingList.receiptNo ?? null)
-        //   packingList.receiptNo = packingList.receiptNo.toUpperCase();
-        // // if (packingList.receiptDate ?? null)
-        // //   packingList.receiptDate = packingList.receiptDate.toUpperCase();
-        // if (packingList.prNo ?? null)
-        //   packingList.prNo = packingList.prNo.toUpperCase();
+        if (packingList.receiptNo ?? null)
+          packingList.receiptNo = packingList.receiptNo.toUpperCase();
+        // if (packingList.receiptDate ?? null)
+        //   packingList.receiptDate = packingList.receiptDate.toUpperCase();
+        if (packingList.prNo ?? null)
+          packingList.prNo = packingList.prNo.toUpperCase();
         // if (packingList.prDate ?? null)
-        // //   packingList.prDate = packingList.prDate.toUpperCase();
-        // if (packingList.gatePassNo ?? null)
-        //   packingList.gatePassNo = packingList.gatePassNo.toUpperCase();
-        // if (packingList.po ?? null)
-        //   packingList.po = packingList.po.toUpperCase();
-        // if (packingList.inspectionNo ?? null)
-        //   packingList.inspectionNo = packingList.inspectionNo.toUpperCase();
-        // if (packingList.biltyNo ?? null)
-        //   packingList.biltyNo = packingList.biltyNo.toUpperCase();
+        //   packingList.prDate = packingList.prDate.toUpperCase();
+        if (packingList.gatePassNo ?? null)
+          packingList.gatePassNo = packingList.gatePassNo.toUpperCase();
+        if (packingList.po ?? null)
+          packingList.po = packingList.po.toUpperCase();
+        if (packingList.inspectionNo ?? null)
+          packingList.inspectionNo = packingList.inspectionNo.toUpperCase();
+        if (packingList.biltyNo ?? null)
+          packingList.biltyNo = packingList.biltyNo.toUpperCase();
         if (packingList.do ?? null)
           packingList.do = packingList.do.toUpperCase();
         if (packingList.driverName ?? null)
           packingList.driverName = packingList.driverName.toUpperCase();
-        // if (packingList.vehicleNo ?? null)
-        //   packingList.vehicleNo = packingList.vehicleNo.toUpperCase();
+        if (packingList.vehicleNo ?? null)
+          packingList.vehicleNo = packingList.vehicleNo.toUpperCase();
         // if (packingList.rolls ?? null)
         //   packingList.rolls = packingList.rolls.toUpperCase();
       });
@@ -149,11 +147,9 @@ export class TransactionsService {
               const roll = new Rolls();
               roll.netWeight = toUpload.rollWeight;
               roll.netLength = toUpload.uploadedLength;
-              //roll.packingListId = toUpload.packingListId;
               roll.rollStateId = 1;
               roll.isFresh = true;
-              roll.packingList = uploadedPackingList[index].packingListId;
-              // console.log("To Upload: " + toUpload.rollWeight);
+              roll.packingListId = uploadedPackingList[index].packingListId;
               console.log(uploadedPackingList[index]);
               return roll;
 
@@ -344,7 +340,7 @@ export class TransactionsService {
             (roll) => roll.RollId == toStockInRoll.rollId,
           );
 
-  //         // if roll is sampling induced, just stock it in.
+          // if roll is sampling induced, just stock it in.
           if (currentCompleteRoll.ForSampling == 1) currentRoll.rollStateId = 5;
           else currentRoll.rollStateId = 3;
           currentRoll.transactionAt = 'WAREHOUSE';
@@ -353,7 +349,7 @@ export class TransactionsService {
           currentRoll.activityId = null;
           currentRoll.activityRollAssignmentTimestamp = null;
           currentRoll.rackLocatorBin = null;
-          currentRoll.lastAllocation = null;
+          currentRoll.lastAllocationId = null;
           currentRoll.updatedAtDate = new Date();
           return currentRoll;
         }),
@@ -367,8 +363,8 @@ export class TransactionsService {
     }
   }
 
-  // // if roll is returning. do not stock in,
-  // // instead map an allocation to warehouse from returning department.
+  // if roll is returning. do not stock in,
+  // instead map an allocation to warehouse from returning department.
   async stockInAllocation(
     toAllocateRolls: WarehouseTransaction[],
   ): Promise<ApiResponse> {
@@ -386,12 +382,13 @@ export class TransactionsService {
         },
       );
 
-  //     // set previous allocations to non-latest.
+      // set previous allocations to non-latest.
       currentAllocations.map(
         (allocation) => (
           (allocation.isLatest = 0), (allocation.updatedAtDate = new Date())
         ),
       );
+
       const rollsAndAllocations = await Promise.all(
         allRolls.map((toAllocateRoll) => {
           const allocation = new Allocations();
@@ -403,31 +400,29 @@ export class TransactionsService {
           toAllocateRoll.activityId = null;
           toAllocateRoll.activityRollAssignmentTimestamp = null;
           toAllocateRoll.rackLocatorBin = null;
-          toAllocateRoll.lastAllocation = null;
+          toAllocateRoll.lastAllocationId = null;
           toAllocateRoll.updatedAtDate = new Date();
           return [allocation, toAllocateRoll];
         }),
       );
 
       const allocations = rollsAndAllocations.map((ra) => ra[0] as Allocations);
+      const rollsToSave = rollsAndAllocations.map((ra) => ra[1] as Rolls);
       const changes = await this.defaultEntityManager.transaction(
         async (batchManager: EntityManager) => {
           await batchManager.save(currentAllocations);
           const savedAllocations = await batchManager.save(allocations);
-
           const rolls = await Promise.all(
-            rollsAndAllocations.map((ra) => {
+            rollsToSave.map((roll) => {
               const savedAllocation = savedAllocations.find(
-                (allocation) => allocation.rollId == (ra[1] as Rolls).rollId,
+                (allocation) => allocation.rollId == roll.rollId,
               );
-
-  //             // assign last allocation id to roll;
-              (ra[1] as Rolls).lastAllocationId = savedAllocation.allocationId;
-              return ra[1] as Rolls;
+              // assign last allocation id to roll;
+              roll.lastAllocationId = savedAllocation.allocationId;
+              return roll;
             }),
           );
-
-  //         // save rolls.
+          console.log(rolls);
           const savedRolls = await batchManager.save(rolls);
           return [savedAllocations, savedRolls];
         },
@@ -482,10 +477,10 @@ export class TransactionsService {
           }),
         );
 
-  //       // remove allocation from roll.
-  //       // keeping last allocation id saved to be used in if condition.
-        const lastAllocation = currentRoll.lastAllocation;
-        currentRoll.lastAllocation = null;
+        // remove allocation from roll.
+        // keeping last allocation id saved to be used in if condition.
+        const lastAlocationId = currentRoll.lastAllocationId;
+        currentRoll.lastAllocationId = null;
         currentRoll.transactionAt = 'WAREHOUSE';
         currentRoll.activityId = null;
         currentRoll.activityRollAssignmentTimestamp = null;
@@ -494,15 +489,15 @@ export class TransactionsService {
         currentRoll.antenna = null;
         currentRoll.updatedAtDate = new Date();
 
-  //       // check if stock in is accepted.
+        // check if stock in is accepted.
         if (toReturnRoll.IsRejected == false) {
           // stock in roll upon accept.
           currentRoll.rollStateId = 5;
           currentRoll.isFresh = false;
 
-  //         // set last allocation of roll to be accepted.
+          // set last allocation of roll to be accepted.
           updatedAllocations = updatedAllocations.map((allocation) => {
-            if (allocation.allocationId == lastAllocation.allocationId) {
+            if (allocation.allocationId == lastAlocationId) {
               allocation.allocationStatus = 'EXECUTED';
               allocation.updatedAt = new Date();
             }
@@ -568,7 +563,7 @@ export class TransactionsService {
         );
 
         // update roll for fabric inspection.
-        currentRoll.lastAllocation = null;
+        currentRoll.lastAllocationId = null;
         currentRoll.transactionAt =
           currentRoll.rollStateId == 3
             ? 'WAREHOUSE'
@@ -756,7 +751,7 @@ export class TransactionsService {
           currentRoll.rollStateId = rollStateOther.rollStateId;
         }
         currentRoll.rackLocatorBin = null; // upon exit, remove rack location bin of roll.
-        currentRoll.lastAllocation = null; // important to set last allocation id to null.
+        currentRoll.lastAllocationId = null; // important to set last allocation id to null.
         currentRoll.transactionAt = 'WAREHOUSE';
         currentRoll.isFresh = false; // to differentiate between returning and uploaded stock in.
         currentRoll.activityId = null;
@@ -846,7 +841,7 @@ export class TransactionsService {
         const currentCompleteRoll = allCompleteRolls.find(
           (roll) => roll.RollId == toSplitRoll.RollId,
         );
-          console.log(currentRoll.packingList);
+          console.log(currentRoll.packingListId);
         // deciding roll split location.
         let childRollStateId = -1;
         if (currentCompleteRoll.LocationCategory == 'WAREHOUSE')
@@ -872,7 +867,7 @@ export class TransactionsService {
         childRoll.netLength = (toSplitRoll.NetLength);
         childRoll.netWeight = toSplitRoll.NetLength * ratio; //toSplitRoll.SplitWeight;
 
-        childRoll.packingList = currentRoll.packingList;
+        childRoll.packingListId = currentRoll.packingListId;
         childRoll.parentRollId = currentRoll.rollId;
         childRoll.isChildRoll = 1;
         childRoll.isFresh = childRollStateId == 5 ? true : false;
@@ -881,7 +876,7 @@ export class TransactionsService {
         childRoll.isCardAssigned = 0;
         childRoll.cardAssignmentTimestamp = null;
         childRoll.transactionAt = currentCompleteRoll.LocationCategory;
-        childRoll.lastAllocation = null;
+        childRoll.lastAllocationId = null;
         childRoll.activityId = null;
         childRoll.activityRollAssignmentTimestamp = null;
 
@@ -895,7 +890,6 @@ export class TransactionsService {
 
         //currentRoll.netWeight = (currentRoll.netWeight/currentRoll.netLength) * toSplitRoll.SplitWeight;
         currentRoll.netWeight = (currentRoll.netWeight - childRoll.netWeight);
-
         currentRoll.netLength = (currentRoll.netLength - childRoll.netLength);
         currentRoll.transactionAt = currentCompleteRoll.LocationCategory;
         currentRoll.updatedAtDate = new Date();
@@ -961,7 +955,7 @@ export class TransactionsService {
         promiseReturn.push(currentAllocations);
 
         // important to set last allocation id to null.
-        currentRoll.lastAllocation = null;
+        currentRoll.lastAllocationId = null;
         currentRoll.updatedAtDate = new Date();
         promiseReturn.push(currentRoll);
         return promiseReturn;
@@ -1040,7 +1034,7 @@ export class TransactionsService {
       rollId: In(rollIds),
     });
 
-    const allPackingListIds = allRolls.map((roll) => roll.packingList);
+    const allPackingListIds = allRolls.map((roll) => roll.packingListId);
     const allPackingListRolls = await this.defaultEntityManager.find(
       PackingList,
       {
@@ -1055,7 +1049,7 @@ export class TransactionsService {
         );
 
         const currentPackingListRoll = allPackingListRolls.find(
-          (roll) => roll.packingListId == currentRoll.packingList,
+          (roll) => roll.packingListId == currentRoll.packingListId,
         );
 
         currentPackingListRoll.order = toUpdateOrderRoll.Order.toUpperCase();

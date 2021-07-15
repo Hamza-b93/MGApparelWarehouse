@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Allocations = void 0;
 const typeorm_1 = require("typeorm");
-const Rolls_1 = require("./Rolls");
 let Allocations = class Allocations {
 };
 __decorate([
@@ -50,21 +49,7 @@ __decorate([
     typeorm_1.Column("bit", { name: "IsLatest" }),
     __metadata("design:type", Number)
 ], Allocations.prototype, "isLatest", void 0);
-__decorate([
-    typeorm_1.ManyToOne(() => Rolls_1.Rolls, (rolls) => rolls.allocations),
-    typeorm_1.JoinColumn([{ name: "RollId", referencedColumnName: "rollId" }]),
-    __metadata("design:type", Rolls_1.Rolls)
-], Allocations.prototype, "roll", void 0);
-__decorate([
-    typeorm_1.OneToMany(() => Rolls_1.Rolls, (rolls) => rolls.lastAllocation),
-    __metadata("design:type", Array)
-], Allocations.prototype, "rolls", void 0);
 Allocations = __decorate([
-    typeorm_1.Index("Allocations_AllocationId_uindex", ["allocationId"], { unique: true }),
-    typeorm_1.Index("Allocations_pk", ["allocationId"], { unique: true }),
-    typeorm_1.Index("ClusteredIndex-20210507-101932", ["allocationId"], { unique: true }),
-    typeorm_1.Index("NonClusteredIndex-20210507-101946", ["allocationStatus", "allocatedTo", "rollId", "allocationId"], {}),
-    typeorm_1.Index("NonClusteredIndex-20210507-102110", ["allocationStatus", "allocatedTo", "allocationId"], { unique: true }),
     typeorm_1.Entity("Allocations", { schema: "Data" })
 ], Allocations);
 exports.Allocations = Allocations;

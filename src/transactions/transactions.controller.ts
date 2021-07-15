@@ -1,4 +1,3 @@
-import { DcnSupplier } from './../entity/views/DcnSupplier';
 import {
   Body,
   Controller,
@@ -332,7 +331,7 @@ export class TransactionsController {
           ],
         },
       );
-
+console.log(toStockInRolls);
       if (toStockInRolls.length == 0) {
         throw new NotFoundException(
           new ApiResponse(
@@ -370,7 +369,7 @@ export class TransactionsController {
         const toReturningRolls = stockIn.filter((roll) =>
           rollIds.includes(roll.rollId),
         );
-
+        console.log(toReturningRolls);
         returnedRolls = await this.transactionsService.stockInAllocation(
           toReturningRolls,
         );
@@ -700,7 +699,7 @@ export class TransactionsController {
           const splitRoll = rollSplit.find(
             (roll2) => roll2.RollId == roll.RollId,
           );
-          //return splitRoll.SplitWeight < roll.NetWeight;
+          return splitRoll.NetLength < roll.NetLength;
         }),
       );
 
@@ -719,9 +718,9 @@ export class TransactionsController {
         const toSplitRolls2 = rollSplit.filter(
           (roll) =>
             presentIds.includes(roll.RollId) &&
-            roll.SplitWeight <
+            roll.NetLength <
               toSplitRolls.find((roll2) => roll2.RollId == roll.RollId)
-                .NetWeight,
+                .NetLength,
         );
         const splittedRolls = await this.transactionsService.rollSplit(
           toSplitRolls2,
@@ -744,8 +743,8 @@ export class TransactionsController {
       const toSplitRolls2 = rollSplit.filter(
         (roll) =>
           presentIds.includes(roll.RollId) &&
-          roll.SplitWeight <
-            toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetWeight,
+          roll.NetLength <
+            toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetLength,
       );
 
       return await this.transactionsService.rollSplit(toSplitRolls2);
@@ -802,9 +801,9 @@ export class TransactionsController {
         const toSplitRolls2 = rollSplit.filter(
           (roll) =>
             presentIds.includes(roll.RollId) &&
-            roll.SplitWeight <
+            roll.NetLength <
               toSplitRolls.find((roll2) => roll2.RollId == roll.RollId)
-                .NetWeight,
+                .NetLength,
         );
         const splittedRolls = await this.transactionsService.rollSplit(
           toSplitRolls2,
@@ -828,8 +827,8 @@ export class TransactionsController {
       const toSplitRolls2 = rollSplit.filter(
         (roll) =>
           presentIds.includes(roll.RollId) &&
-          roll.SplitWeight <
-            toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetWeight,
+          roll.NetLength <
+            toSplitRolls.find((roll2) => roll2.RollId == roll.RollId).NetLength,
       );
 
       return await this.transactionsService.rollSplit(toSplitRolls2);
